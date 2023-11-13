@@ -67,6 +67,5 @@ async def auth(request: Request):
     request.session['user'] = dict(user_data)
     return RedirectResponse(url='/')
 
-
 if __name__ == '__main__':
-    uvicorn.run(app, port=7000)
+    uvicorn.run("run:app", host="0.0.0.0", port=7000)
